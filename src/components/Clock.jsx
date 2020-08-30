@@ -2,6 +2,8 @@ import React from 'react';
 
 class Clock extends React.Component {
     formatTime(timeInSeconds) {
+        
+        
         var seconds = timeInSeconds % 60;
         var minutes = Math.floor(timeInSeconds / 60);
 
@@ -17,12 +19,12 @@ class Clock extends React.Component {
     }
 
     render() {
-        var {timeInSeconds} = this.props;
+         var sec = this.props.value;
         //Keep the classes name. Try to inject your code and do not remove existing code
         return (
             <div className="clock">
                 <span className="clock-text">
-                  
+                {this.formatTime(parseInt(sec))}
                 </span>
             </div>
         );
