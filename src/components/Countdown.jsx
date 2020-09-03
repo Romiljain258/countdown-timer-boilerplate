@@ -16,12 +16,11 @@ class Countdown extends React.Component {
             second:e,
         });
     };
-
     render() {
          let {second}=this.state;
         return (
             <div>
-                <Clock value={second}/>
+                <Clock value={second} />
                 <CountdownForm onSetCountdownTime={this.onSetCountdownTime}/>
             </div>
         );
